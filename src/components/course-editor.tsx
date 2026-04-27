@@ -160,7 +160,7 @@ export function CourseEditor({ initialCourse }: { initialCourse: CourseData }) {
           </Card>
         )}
 
-        <Accordion type="single" className="w-full space-y-4">
+        <Accordion className="w-full space-y-4">
           {course.modules.length === 0 && !newModuleForm.show && (
             <div className="text-center py-8 border rounded-lg bg-card/50 text-muted-foreground">No modules exist yet. Why not add one?</div>
           )}
