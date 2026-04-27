@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AI-Powered Curriculum Creator
 
-## Getting Started
+A full-stack Next.js application built for the House of Edtech Fullstack Developer Assignment. This platform allows users to generate, edit, and manage structured educational curricula using AI assistance.
 
-First, run the development server:
+## 🚀 Features
 
+- **AI Generation**: Generate multi-module curricula based on topics and target audiences.
+- **Full CRUD**: Create, Read, Update, and Delete courses and individual modules.
+- **Authentication**: Secure access using NextAuth.js (supporting GitHub OAuth and Mock Credentials).
+- **Authorization**: Route-level protection and resource ownership.
+- **Modern UI**: Built with React, Tailwind CSS, and Shadcn UI components.
+- **E2E Testing**: Automated browser testing with Playwright.
+- **Security**: Robust protections against common web vulnerabilities (XSS, CSRF, Injection).
+
+## 🛠 Tech Stack
+
+- **Framework**: Next.js 16 (App Router)
+- **Database**: SQLite with Prisma ORM
+- **Auth**: Auth.js (NextAuth.js v5)
+- **Styling**: Tailwind CSS + Shadcn UI
+- **Testing**: Playwright
+
+## 🏁 Getting Started
+
+### 1. Clone and Install
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/MohammedMuneeb/House-of-EdTech-.git
+cd House-of-EdTech-
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Environment Setup
+Create a `.env` file in the root directory and add the following:
+```env
+DATABASE_URL="file:./dev.db"
+AUTH_SECRET="any-random-string-for-dev"
+# For GitHub Login (Optional for local testing)
+AUTH_GITHUB_ID="your_client_id"
+AUTH_GITHUB_SECRET="your_client_secret"
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 3. Database Initialization
+```bash
+npx prisma db push
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 4. Run the App
+```bash
+npm run dev
+```
+Open [http://localhost:3000](http://localhost:3000) to see the app.
 
-## Learn More
+## 🧪 Running Tests
+```bash
+npm run test:e2e
+```
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📄 License
+Built as a technical assignment.
