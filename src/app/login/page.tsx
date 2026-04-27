@@ -68,9 +68,21 @@ export default function LoginPage() {
             "use server"
             await signIn("github", { redirectTo: "/" })
           }}
+          className="mb-3"
         >
           <Button type="submit" variant="outline" className="w-full">
             Sign in with GitHub
+          </Button>
+        </form>
+
+        <form
+          action={async () => {
+            "use server"
+            await signIn("google", { redirectTo: "/" })
+          }}
+        >
+          <Button type="submit" variant="outline" className="w-full">
+            Sign in with Google
           </Button>
         </form>
 
